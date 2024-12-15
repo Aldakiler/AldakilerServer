@@ -1,2 +1,5 @@
 # AldakilerServer
-Server files for the SMP "Aldakiler", feel free to copy it and make your own server.
+Server files for the SMP "Aldakiler".
+[Türkçe Çeviri](README.tr.md)
+[English](README.en.md)
+
