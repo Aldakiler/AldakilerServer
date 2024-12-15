@@ -1,0 +1,101 @@
+##################################################################################################################################
+#                                                                                                                                #
+#                                                        ChestLock                                                               #
+#                                                         v1.4.4                                                                 #
+#                        Secure player chests with the easy-to-use Chest Lock Plugin for Spigot servers.                         #
+#                                       Need help? Contact unsocial6136 on Discord                                               #
+#                                                                                                                                #
+##################################################################################################################################
+
+settings:
+  # Disable this if you dont have a permission plugin
+  usePermissions: false
+
+  # Automatic update checking
+  updateChecker: true
+  
+  # Changes whether lockable blocks can survive explosions, or not.
+  tntProof: true
+  
+  # Sorts a chest inventory
+  # if you use MIDDLE, you have to be holding a item in the inventory or in creative
+  # sortBy options 'alphabetical', 'type'
+  # sortWith options 'LEFT', 'RIGHT', 'SHIFT_LEFT', 'SHIFT_RIGHT', 'MIDDLE', 'NUMBER_KEY', 'DOUBLE_CLICK', 'SWAP_OFFHAND'
+  sortInventoryEnabled: true
+  sortBy: 'type'
+  sortWith: 'DOUBLE_CLICK'
+  
+  # Allows players to Shift + Left Click locks with Redstone to be alerted of intruders.
+  intrusionAlerts: true
+  alertRadius: 15
+  
+  # Changes the LockID key in the 'locks.yml'
+  # not recommended to change these
+  lockID-characters: 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
+  lockID-size: 12
+
+lockables:
+  ANVIL: true
+  BARREL: true
+  BLAST_FURNACE: true
+  CHEST: true
+  DISPENSER: true
+  DROPPER: true
+  ENCHANTING_TABLE: true
+  ENDER_CHEST: false
+  FURNACE: true
+  HOPPER: true
+  JUKEBOX: true
+  SHULKER_BOX: false
+  SMOKER: true
+  TRAPPED_CHEST: true
+
+messages:
+  adjacentToLock: '&8[&6ChestLock&8] &7Kendi kilidinle &cbitişik &7olan kilitler oluşturamazsın.'
+  bypassOff: '&8[&6ChestLock&7-&6A&8] &cDisabled &7bypass mode'
+  bypassOn: '&8[&6ChestLock&7-&6A&8] &aEnabled &7bypass mode'
+  bypassWarning: '&cYou are currently bypassing ChestLock controller so no lock was created, use &7/chestlock bypass &cto create locks again'
+  cancelAction: '&8[&6ChestLock&8] &cŞu komut iptal ediliyor&8: &7%action%'
+  claimLock: '&8[&6ChestLock&8] &7Şu kilidi &akendi kilidin &7a olarak kabul ettin: %type%'
+  claimLockTip: '&8[&6ChestLock&8] &7Almak istediğin kilide &asağ tıkla.&7'
+  commandTimeout: '&8[&6ChestLock&8] &cKomut zaman aşımı&8: &7%action%'
+  createLock: '&8[&6ChestLock&8] &7Bir &akilit &7a oluşturdun.'
+  destroyLockTip: '&8[&6ChestLock&8] &7Yok etmek istediğin kilide &csağ tıkla.'
+  destroyedLock: '&8[&6ChestLock&8] &7%type% kilidi &cyok edildi&7.'
+  invalidClaimType: '&8[&6ChestLock&8] &7Bu &ckilit alınamaz&7.'
+  invalidInstance: '&8[&6ChestLock&8] &cInvalid user instance, this command can only be ran by Players'
+  invalidLock: '&8[&6ChestLock&8] &cGeçersiz kilit.'
+  invalidOwner: '&8[&6ChestLock&8] &7Bu kilit şu kullanıcı tarafından sahiplenildi: &c%player%'
+  invalidShareOwner: '&8[&6ChestLock&8] &c%target% kişisi bu kilidin sahibi değil.'
+  makePrivate: '&8[&6ChestLock&8] &7Bu kilidi &cgizli yaptın.'
+  makePublic: '&8[&6ChestLock&8] &7Bu kilidi &aherkese açık yaptın.'
+  makePublicTip: '&8[&6ChestLock&8] &7Herkese açık yapmak istediğin kilide &asağ tıkla.'
+  noPermission: '&8[&6ChestLock&8] &cBunu yapmak için iznin yok.'
+  removeLock: '&8[&6ChestLock&8] &7Bu &ckilidi &7a kaldırdın.'
+  shareLock: '&8[&6ChestLock&8] &7Başarılı bir şekilde şununla sahipliği paylaştın: %target%'
+  shareLockTip: '&8[&6ChestLock&8] &7Başkalarına sahipliğini paylaşmak istedğin kilide &asağ tıkla. &7Şunun için: %target%'
+  unshareLock: '&8[&6ChestLock&8] &7Başarılı bir şekilde &aşunun için &7sahipliği kaldırdın: %target%'
+  unshareLockTip: '&8[&6ChestLock&8] &7Sahiplik kaldırmak istediğin kilide &csağ tıkla. &7Şunun için: %target%'
+  
+  # Intrusion Alert
+  # Shift-Left-Click a chest with redstone in your hand
+  intrusionAlert: '&4%player% kullanıcısı senin bir kilitli eşyana erişmeyi denedi. Eşya: %type%'
+  changeAlertMode: '&8[&6Intrusion Alert&8] &7Aktif güvenlik bildirimi - %type%: &6%mode%'
+  
+  # Debug Action
+  # Shift-Left-Click a chest with nothing in your hand
+  getLockID: '&8[&6Lock ID&8] &7%id%'
+  getLockType: '&8[&6Type&8] &7%type%'
+  getLockPublic: '&8[&6Public&8] &7%public%'
+  getLockOwners: '&8[&6Owners&8] &7%owners%'
+  
+# not recommended to change these
+actions:
+  addOwner: 'addOwner'
+  claimLock: 'claimLock'
+  destroyLock: 'destroyLock'
+  removeOwner: 'removeOwner'
+  makePublic: 'makePublic'
+  
+# dont change this 
+configVersion: 1.0.0
