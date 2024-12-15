@@ -1,0 +1,7 @@
+Merhaba, {PLAYER}!
+Sunucu versiyonu: v0.4.3 (Beta)
+Güncelleme notları:
+1. Sunucunun alanı 2 GB’den 50 GB’ye yükseltilmiştir.
+2. Artık gündüz olması için oyuncuların yarısının uyuması yeterli. (Issue 1: Change gamerule playersSleepingPercentage to %50)
+
+-OwO
